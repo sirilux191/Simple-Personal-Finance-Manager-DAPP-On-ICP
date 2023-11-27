@@ -1,0 +1,147 @@
+.information-text {
+  text-align: center;
+  margin: 10px;
+  position: relative;
+  font-size: var(--text-large-size);
+  line-height: 24px;
+  color: var(--dark-gray);
+  font-family: var(--font-poppins);
+}
+.button9 {
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 20px;
+  font-family: var(--font-poppins);
+  color: var(--dominant);
+  text-align: center;
+}
+.button8,
+.buttonframe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.button8 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-7xs) var(--padding-base);
+  background-color: var(--accent);
+  border-radius: var(--br-xl);
+  overflow: hidden;
+}
+.button8:hover {
+  background-color: var(--color-royalblue-100);
+}
+.buttonframe {
+  flex-wrap: wrap;
+  gap: var(--gap-3xs);
+}
+.frame,
+.get-data1 {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.frame {
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.get-data1 {
+  position: relative;
+  background-color: var(--dominant);
+  width: 100%;
+  height: 1024px;
+  justify-content: flex-start;
+  gap: var(--gap-81xl);
+}
+@media screen and (max-width: 960px) {
+  .get-data1 {
+    height: auto;
+  }
+}
+
+table {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 50px auto;
+  font-family: var(--font-poppins);
+  align-items: center;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+}

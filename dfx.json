@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "personalfinancetracker_backend": {
+      "main": "src/personalfinancetracker_backend/main.mo",
+      "type": "motoko"
+    },
+    "personalfinancetracker_frontend": {
+      "dependencies": [
+        "personalfinancetracker_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/personalfinancetracker_frontend/src/index.html"
+      },
+      "source": [
+        "src/personalfinancetracker_frontend/assets",
+        "dist/personalfinancetracker_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

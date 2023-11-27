@@ -1,0 +1,122 @@
+.your-personal-finance {
+  align-self: stretch;
+  position: relative;
+  line-height: 58.92px;
+  font-weight: 600;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.info {
+  align-self: stretch;
+  position: relative;
+  line-height: 32px;
+}
+.carddetails,
+.text-wrapper {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-wrapper {
+  align-items: center;
+  gap: 4px;
+}
+.carddetails {
+  align-items: flex-start;
+}
+.homepageimage-icon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.card,
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.card {
+  align-self: stretch;
+  border-radius: 10.52px;
+  background-color: #f9f9f9;
+  width: 1246px;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: var(--padding-xl);
+  gap: 20px;
+}
+.cards-container {
+  height: 504px;
+  padding: var(--padding-21xl) 0;
+  text-align: left;
+  font-size: 19.39px;
+  color: var(--color-slategray);
+  font-family: var(--font-poppins);
+}
+.content-section,
+.home1 {
+  background-color: var(--dominant);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-section {
+  box-shadow: 0 0 52.6px rgba(0, 0, 0, 0.03);
+  justify-content: center;
+  padding: 50px var(--padding-61xl);
+  gap: 44px;
+  text-align: center;
+  font-size: 48.4px;
+  color: var(--color-black);
+  font-family: var(--font-changa);
+}
+.home1 {
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 80px;
+}
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 100%;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .content-section {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 960px) {
+  .home1 {
+    height: auto;
+  }
+}
+@media screen and (max-width: 420px) {
+  .your-personal-finance {
+    font-size: 36px;
+  }
+  .info {
+    font-size: var(--text-small-size);
+  }
+  .homepageimage-icon {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
